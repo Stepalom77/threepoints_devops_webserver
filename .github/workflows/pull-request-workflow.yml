@@ -22,7 +22,7 @@ jobs:
         fi
     - name: Ejecutando workflow en base a variable
       run: |
-        if [[ "${{ allow_pull }}" == "true" ]]; then
+        if [[ "${{ env.allow_pull }}" == "true" ]]; then
           echo "Permitiendo Pull Request"
         else
           echo "Build fallida. Impidiendo Pull Request."
